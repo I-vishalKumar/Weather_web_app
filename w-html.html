@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Weather-app</title>
+    <link rel="stylesheet" href="w-css.css">
+    <link rel="icon" type="image/x-icon" href="/node_modules/favicon.ico">
+  </head>
+  <body>
+    <div class="box">
+      <div class="inner">
+         <nav>
+           <div class="logo">
+             <ion-icon class="logo1" name="logo-soundcloud"></ion-icon>
+            <span class="place">{%location%}</span>
+           </div>
+
+             <div class="button"><ion-icon name="construct-outline"></ion-icon></div>
+           </nav>
+
+         <div class="content">
+            <div class="temperature">
+              <span>{%temperature%}</span>
+            </div>
+            <div class="param">
+               <span class="digree">&#176;C</span>
+               <span class="day"></span>
+            </div>
+
+          <div class="date">
+             <span class="dateformat"></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+   <script>
+   let date = document.querySelector('.dateformat');
+   let day = document.querySelector('.day');
+
+      const currDay = ()=>{
+          const arr = ['sun','mon','tue','wed','thu','fri','sat'];
+
+          let currentTime = new Date();
+          let todayIs  = arr[currentTime.getDay()];
+           return todayIs;
+      }
+      const time = ()=>{
+         const month = ['Jan','Meb','Mar','Apr','May','Jun','July','Aug','Sep','Oct','Nov','Dec']
+           let a = new Date();
+           let now = month[a.getMonth()];
+           let date = a.getDate();
+           let year = a.getFullYear();
+           let ab = '.';
+           let full =`${now.fontcolor('#ffdd99')}${ ab.fontcolor("#F5F5DC")}${date}${ab.fontcolor("#F5F5DC")}${year}`;
+           return full;
+      }
+       date.innerHTML = time();
+       day.innerHTML = currDay();
+     </script>
+
+  </body>
+</html>

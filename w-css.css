@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:'Brush Script MT', cursive;
+}
+body .box {
+  background: #ddccff;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid red; */
+}
+.box .inner{
+  border-radius: 5px;
+  display: inline-block;
+  height: 450px;
+  width: 350px;
+  background: rgb(2,0,36);
+  background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 14%, rgba(0,212,255,1) 100%);
+  box-shadow:  0 4px 4px;
+}
+ .logo1 , .place{
+   /* border: 1px solid red; */
+   align-items: center;
+  font-size: 2rem;
+}
+.button ion-icon{
+  font-size: 1.4rem;
+  padding: 8px;
+}
+.box .inner nav {
+  width: 100%;
+  height: 50px;
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+
+.box .inner nav{
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+}
+
+.box .inner nav .logo, .button ,span{
+  padding: 5px;
+}
+
+.content{
+  /* border: 1px solid red; */
+  height: calc(100% - 50px);
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.date{
+  width: 100%;
+  margin-top: 18px;
+}
+.dateformat{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  justify-content: flex-end;
+}
+
+.param .digree ,.day, .dateformat{
+  display: flex;
+  /* border: 1px solid green; */
+}
+
+.content .temperature span{
+  display: flex;
+  font-size: 4rem;
+  /* border: 1px solid blue; */
+}
+.temperature , .digree , .dateformat {
+  margin-top: 80px;
+}
+.temperature {
+  margin-left: 5px;
+}
+.digree{
+  font-size: 2rem;
+}
+.day{
+  font-size: 1.5rem;
+}
